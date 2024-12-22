@@ -1,0 +1,12 @@
+.git
+.bundle
+.yarn
+
+node_modules
+android
+ios
+vendor
+build
+
+__mocks__/*
+coverage/*

@@ -1,4 +1,4 @@
-package com.oneglobal
+package com.weatherapp
 
 import android.app.Application
 import com.facebook.react.PackageList
