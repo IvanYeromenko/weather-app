@@ -1,5 +1,5 @@
 import React from "react";
-import { ActivityIndicator, ActivityIndicatorProps } from "react-native";
+import { ActivityIndicator, type ActivityIndicatorProps } from "react-native";
 import { COLORS } from "@/constants";
 import { styles } from "./styles";
 

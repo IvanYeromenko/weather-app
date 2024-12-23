@@ -10,16 +10,16 @@ export const Button = ({
   style,
   ...props
 }: IButtonProps): JSX.Element => (
-    <Pressable style={style} disabled={disabled} {...props}>
-      <View style={disabled ? styles.disabled : styles.active}>
-        <Text
-          style={[
-            styles.text,
-            { color: disabled ? COLORS.lightGrey : COLORS.white },
-          ]}
-        >
-          {text}
-        </Text>
-      </View>
-    </Pressable>
-  );
+  <Pressable style={style} disabled={disabled} {...props}>
+    <View style={disabled ? styles.disabled : styles.active}>
+      <Text
+        style={[
+          styles.text,
+          { color: disabled ? COLORS.lightGrey : COLORS.white },
+        ]}
+      >
+        {text}
+      </Text>
+    </View>
+  </Pressable>
+);

@@ -7,8 +7,10 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 16,
     backgroundColor: COLORS.white,
   },
+  languageButton: {
+    marginVertical: 20,
+  },
   searchField: {
-    marginTop: 20,
     marginBottom: 40,
   },
   button: {
