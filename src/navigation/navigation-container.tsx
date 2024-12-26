@@ -1,5 +1,6 @@
 import React from 'react';
 import {useRef} from 'react';
+
 import {NavigationContainer as RNNavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {SearchScreen} from '@/screens';

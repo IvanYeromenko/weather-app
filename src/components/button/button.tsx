@@ -1,5 +1,6 @@
 import React from 'react';
 import {Pressable, Text, View} from 'react-native';
+
 import {COLORS} from '@/constants';
 import {styles} from './styles';
 import type {IButtonProps} from './types';

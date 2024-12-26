@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Keyboard, Pressable, Text} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
+
 import {observer} from 'mobx-react';
 import {Button, LanguageButton, Loader, SearchField, WeatherCard} from '@/components';
 import {SupportedLanguageList} from '@/constants';

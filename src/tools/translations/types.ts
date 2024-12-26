@@ -1,4 +1,5 @@
 import type {ReactNode} from 'react';
+
 import type {i18n} from 'i18next';
 import {SupportedLanguageList} from '@/constants';
 import type {TTranslation} from '@/utils';

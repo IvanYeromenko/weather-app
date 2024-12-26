@@ -1,5 +1,6 @@
 import React from 'react';
 import {Pressable, type PressableProps, Text, View} from 'react-native';
+
 import {SupportedLanguageList} from '@/constants';
 import {useLocale} from '@/hooks';
 import {styles} from './styles';

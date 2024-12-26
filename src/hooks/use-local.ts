@@ -1,4 +1,5 @@
 import {useContext} from 'react';
+
 import {TranslationContext, type TTranslationContextValue} from '@/tools';
 
 export const useLocale = (): TTranslationContextValue => {

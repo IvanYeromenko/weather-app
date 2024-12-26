@@ -1,4 +1,5 @@
 import 'intl-pluralrules'; //To resolve issue mentioned here https://www.i18next.com/misc/migration-guide
+
 import i18next, {type i18n, type Resource, type TOptions} from 'i18next';
 import translations from '@/../localization';
 import type {SupportedLanguageList} from '@/constants';

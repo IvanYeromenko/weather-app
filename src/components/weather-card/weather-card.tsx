@@ -1,5 +1,6 @@
 import React, {useMemo} from 'react';
 import {FlatList, Image, Text, View} from 'react-native';
+
 import {injectViewId} from '@/utils';
 import {styles} from './styles';
 import type {IFiveHoursForecast, IWeatherCardProps} from './types';

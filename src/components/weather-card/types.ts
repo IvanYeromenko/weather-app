@@ -1,4 +1,5 @@
 import type {ViewProps} from 'react-native';
+
 import type {ICurrentWeather, IForecast, ILocation} from '@/stores';
 
 export interface IWeatherCardProps extends ViewProps {

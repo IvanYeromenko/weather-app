@@ -15,11 +15,11 @@ module.exports = {
   },
   reportUnusedDisableDirectives: true,
   rules: {
-    semi: 0,
+    semi: 1,
     'simple-import-sort/imports': [
       'warn',
       {
-        groups: [['^react', '^react-native', '^\\u0000', '^@?\\w', '^[^.]', '^\\.']],
+        groups: [['^react', '^react-native'], ['^\\u0000'], ['^@?\\w', '^[^.]', '^\\.']],
       },
     ],
     'react-hooks/exhaustive-deps': 'off',
@@ -33,6 +33,10 @@ module.exports = {
          */
         arrowParens: 'avoid',
         semi: true,
+        bracketSameLine: true,
+        bracketSpacing: false,
+        singleQuote: true,
+        trailingComma: 'all',
       },
     ],
     /**
@@ -94,6 +98,24 @@ module.exports = {
          */
         selector: ['typeLike'],
         format: ['PascalCase'],
+      },
+      {
+        // interface
+        selector: 'interface',
+        format: ['PascalCase'],
+        custom: {
+          regex: '^I[A-Z]',
+          match: true,
+        },
+      },
+      {
+        // typeParameter
+        selector: 'typeAlias',
+        format: ['PascalCase'],
+        custom: {
+          regex: '^T[A-Z]',
+          match: true,
+        },
       },
       {
         selector: ['variable'],

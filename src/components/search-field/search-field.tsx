@@ -1,5 +1,6 @@
 import React from 'react';
 import {Pressable, Text, TextInput as RNTextInput, View} from 'react-native';
+
 import {Cross, SearchMagnifyingGlass} from '@/assets';
 import {COLORS, ICON_SIZE} from '@/constants';
 import {injectViewId} from '@/utils';
