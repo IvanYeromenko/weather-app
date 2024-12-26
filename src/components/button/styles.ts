@@ -1,10 +1,10 @@
-import { StyleSheet } from "react-native";
-import { COLORS } from "@/constants";
-import { SHADOW } from "@/theme";
+import {StyleSheet} from 'react-native';
+import {COLORS} from '@/constants';
+import {SHADOW} from '@/theme';
 
 export const styles = StyleSheet.create({
   active: {
-    alignItems: "center",
+    alignItems: 'center',
     backgroundColor: COLORS.primary,
     borderColor: COLORS.darkPrimary,
     borderWidth: 1,
@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     ...SHADOW,
   },
   disabled: {
-    alignItems: "center",
+    alignItems: 'center',
     backgroundColor: COLORS.inactive,
     paddingVertical: 12,
     borderRadius: 100,
@@ -21,6 +21,6 @@ export const styles = StyleSheet.create({
   },
   text: {
     fontSize: 16,
-    fontWeight: "600",
+    fontWeight: '600',
   },
 });

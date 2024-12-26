@@ -1,7 +1,7 @@
-import { Platform } from "react-native";
+import {Platform} from 'react-native';
 
 export function injectViewId(id: string) {
-  if (Platform.OS === "ios") {
+  if (Platform.OS === 'ios') {
     return {
       testID: `test-${id}`,
     };

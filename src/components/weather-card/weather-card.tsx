@@ -1,8 +1,8 @@
-import React, { useMemo } from "react";
-import { FlatList, Image, Text, View } from "react-native";
-import { injectViewId } from "@/utils";
-import { styles } from "./styles";
-import type { IFiveHoursForecast, IWeatherCardProps } from "./types";
+import React, {useMemo} from 'react';
+import {FlatList, Image, Text, View} from 'react-native';
+import {injectViewId} from '@/utils';
+import {styles} from './styles';
+import type {IFiveHoursForecast, IWeatherCardProps} from './types';
 
 const ICON_SIZE = 45;
 
@@ -17,29 +17,29 @@ export const WeatherCard = ({
 
   const fiveHoursFromNow = useMemo(
     () => new Date(currentTime.getTime() + 5 * 60 * 60 * 1000),
-    [currentTime]
+    [currentTime],
   );
 
   const forecastData = useMemo(
     () =>
       forecast.forecastday
-        .map((forecastDay) =>
+        .map(forecastDay =>
           forecastDay.hour
-            .map((hour) => ({
+            .map(hour => ({
               time: hour.time,
               temp_c: hour.temp_c,
             }))
-            .filter((hour) => {
+            .filter(hour => {
               const hourTime = new Date(hour.time);
               return hourTime >= currentTime && hourTime <= fiveHoursFromNow;
-            })
+            }),
         )
         .flat(),
-    [currentTime, fiveHoursFromNow, forecast.forecastday]
+    [currentTime, fiveHoursFromNow, forecast.forecastday],
   );
 
-  const renderItem = ({ item }: { item: IFiveHoursForecast }): JSX.Element => {
-    const time = item.time.split(" ")[1];
+  const renderItem = ({item}: {item: IFiveHoursForecast}): JSX.Element => {
+    const time = item.time.split(' ')[1];
     return (
       <View style={styles.fiveHoursForecast}>
         <Text style={styles.forecast}>{time} - </Text>
@@ -56,7 +56,7 @@ export const WeatherCard = ({
             {location.country}, {location.name}
           </Text>
           <Image
-            {...injectViewId("condition-icon")}
+            {...injectViewId('condition-icon')}
             source={{
               uri: `https:${currentWeather.condition.icon}`,
             }}
@@ -70,8 +70,8 @@ export const WeatherCard = ({
         </View>
       </View>
       <FlatList
-        {...injectViewId("forecast-list")}
-        keyExtractor={(item) => item.time}
+        {...injectViewId('forecast-list')}
+        keyExtractor={item => item.time}
         data={forecastData}
         renderItem={renderItem}
       />

@@ -1,9 +1,9 @@
 const translations = {
-  "english": {
-    translation: require("./english/index.json"),
+  english: {
+    translation: require('./english/index.json'),
   },
-  "russian": {
-    translation: require("./russian/index.json"),
+  russian: {
+    translation: require('./russian/index.json'),
   },
 };
 

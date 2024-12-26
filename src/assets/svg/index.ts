@@ -1,4 +1,4 @@
-import Cross from "./cross.svg";
-import SearchMagnifyingGlass from "./search-magnifying-glass.svg";
+import Cross from './cross.svg';
+import SearchMagnifyingGlass from './search-magnifying-glass.svg';
 
-export { Cross, SearchMagnifyingGlass };
+export {Cross, SearchMagnifyingGlass};

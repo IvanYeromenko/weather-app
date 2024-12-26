@@ -1,20 +1,11 @@
-import React, {
-  type ReactElement,
-  useCallback,
-  useMemo,
-  useState,
-} from "react";
-import { SupportedLanguageList } from "@/constants";
-import { getI18nInstance, initializeI18n, t } from "@/utils";
-import { TranslationContext } from "./translation-context";
-import { TSupportedLanguage, TTranslationProviderProps } from "./types";
+import React, {type ReactElement, useCallback, useMemo, useState} from 'react';
+import {SupportedLanguageList} from '@/constants';
+import {getI18nInstance, initializeI18n, t} from '@/utils';
+import {TranslationContext} from './translation-context';
+import {TSupportedLanguage, TTranslationProviderProps} from './types';
 
-export const TranslationProvider = ({
-  children,
-}: TTranslationProviderProps): ReactElement => {
-  const [selectedLocale, setLocale] = useState<TSupportedLanguage>(
-    SupportedLanguageList[0]
-  );
+export const TranslationProvider = ({children}: TTranslationProviderProps): ReactElement => {
+  const [selectedLocale, setLocale] = useState<TSupportedLanguage>(SupportedLanguageList[0]);
 
   initializeI18n(SupportedLanguageList[0]);
 
@@ -31,12 +22,8 @@ export const TranslationProvider = ({
       updateLocale: updateLocaleMemoized,
       t,
     }),
-    [selectedLocale, updateLocaleMemoized]
+    [selectedLocale, updateLocaleMemoized],
   );
 
-  return (
-    <TranslationContext.Provider value={contextValue}>
-      {children}
-    </TranslationContext.Provider>
-  );
+  return <TranslationContext.Provider value={contextValue}>{children}</TranslationContext.Provider>;
 };

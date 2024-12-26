@@ -1,10 +1,10 @@
-import { StyleSheet } from "react-native";
-import { COLORS } from "@/constants";
-import { SHADOW } from "@/theme";
+import {StyleSheet} from 'react-native';
+import {COLORS} from '@/constants';
+import {SHADOW} from '@/theme';
 
 export const styles = StyleSheet.create({
   languageButton: {
-    alignItems: "center",
+    alignItems: 'center',
     alignSelf: 'flex-end',
     backgroundColor: COLORS.primary,
     borderColor: COLORS.darkPrimary,
@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
   },
   text: {
     color: COLORS.white,
-    fontWeight: "600",
+    fontWeight: '600',
     padding: 12,
   },
 });

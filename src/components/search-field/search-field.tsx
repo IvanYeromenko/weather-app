@@ -1,10 +1,10 @@
-import React from "react";
-import { Pressable, Text, TextInput as RNTextInput, View } from "react-native";
-import { Cross, SearchMagnifyingGlass } from "@/assets";
-import { COLORS, ICON_SIZE } from "@/constants";
-import { injectViewId } from "@/utils";
-import { styles } from "./styles";
-import type { ISearchFieldProps } from "./types";
+import React from 'react';
+import {Pressable, Text, TextInput as RNTextInput, View} from 'react-native';
+import {Cross, SearchMagnifyingGlass} from '@/assets';
+import {COLORS, ICON_SIZE} from '@/constants';
+import {injectViewId} from '@/utils';
+import {styles} from './styles';
+import type {ISearchFieldProps} from './types';
 
 export const SearchField = ({
   value,
@@ -20,7 +20,7 @@ export const SearchField = ({
   };
 
   const handleEndIconPress = () => {
-    onChangeText?.("");
+    onChangeText?.('');
     onEndIconPress?.();
   };
 
@@ -39,10 +39,7 @@ export const SearchField = ({
           {...props}
         />
         {value && (
-          <Pressable
-            {...injectViewId("clear-icon")}
-            onPress={handleEndIconPress}
-          >
+          <Pressable {...injectViewId('clear-icon')} onPress={handleEndIconPress}>
             <Cross width={ICON_SIZE} height={ICON_SIZE} />
           </Pressable>
         )}

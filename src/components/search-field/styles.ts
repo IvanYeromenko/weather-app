@@ -1,11 +1,11 @@
-import { StyleSheet } from "react-native";
-import { COLORS } from "@/constants";
-import { SHADOW } from "@/theme";
+import {StyleSheet} from 'react-native';
+import {COLORS} from '@/constants';
+import {SHADOW} from '@/theme';
 
 export const styles = StyleSheet.create({
   searchField: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     paddingHorizontal: 16,
     backgroundColor: COLORS.white,
     borderColor: COLORS.darkGrey,
@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
   },
   lable: {
     fontSize: 14,
-    fontWeight: "600",
+    fontWeight: '600',
     marginBottom: 8,
   },
 });

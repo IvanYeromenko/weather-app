@@ -1,1 +1,1 @@
-export const SupportedLanguageList = ["english", "russian"] as const;
+export const SupportedLanguageList = ['english', 'russian'] as const;
