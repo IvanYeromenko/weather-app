@@ -6,13 +6,14 @@ import {observer} from 'mobx-react';
 import {Button, LanguageButton, Loader, SearchField, WeatherCard} from '@/components';
 import {SupportedLanguageList} from '@/constants';
 import {useLocale} from '@/hooks';
-import {weatherStore} from '@/stores';
+import {useStore} from '@/hooks/use-store';
 import {FLEX} from '@/theme';
 import {initializeI18n} from '@/utils';
 import {styles} from './styles';
 
 export const SearchScreen = observer(() => {
   const {t} = useLocale();
+  const {weatherStore} = useStore();
   const [searchLocation, setSearchLocation] = useState<string>('');
 
   initializeI18n(SupportedLanguageList[0]);
